@@ -143,6 +143,7 @@ export class SimpleAppStack extends cdk.Stack {
     new cdk.CfnOutput(this, "Get Movie Cast Url", {
       value: getMovieCastMembersURL.url,
     });
+
   }
 }
 
