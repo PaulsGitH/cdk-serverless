@@ -15,6 +15,16 @@ export class SimpleAppStack extends cdk.Stack {
       memorySize: 128,
     });
 
+    const simpleFnURL = simpleFn.addFunctionUrl({
+      authType: lambda.FunctionUrlAuthType.NONE,
+      cors: {
+        allowedOrigins: ["*"],
+      },
+    });
+
+    new cdk.CfnOutput(this, "Simple Function Url", { value: simpleFnURL.url });
+
+
   }
 }
 
