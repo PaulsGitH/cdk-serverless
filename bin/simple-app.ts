@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import * as cdk from 'aws-cdk-lib/core';
-import { SimpleApp2Stack } from '../lib/simple-app-2-stack';
+import * as cdk from 'aws-cdk-lib';
+import { SimpleAppStack } from '../lib/simple-app-stack';
 
 const app = new cdk.App();
-new SimpleApp2Stack(app, 'SimpleApp2Stack', {
+new SimpleAppStack(app, 'SimpleAppStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
